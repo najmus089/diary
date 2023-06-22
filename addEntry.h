@@ -1,15 +1,16 @@
-void addEntry(struct DiaryEntry entries[], int *count) {
-    struct DiaryEntry newEntry;
-    printf("\nEnter the date (DD MM YYYY): ");
-    if (scanf("%d %d %d", &newEntry.day, &newEntry.month, &newEntry.year) != 3) {
+
+void addEntry(diary entries[],int *count){
+diary newentry;
+printf("\nEnter the date (DD MM YYYY): ");
+if(scanf("%d%*c%d%*c%d",&newentry.day,&newentry.month,&newentry.year)!=3){
         printf("\nInvalid date format. Entry not added.\n");
-        while (getchar() != '\n');  // Clear input buffer
+        while(getchar()!='\n');
         return;
-    }
-    printf("Enter the entry: ");
-    getchar();
-    fgets(newEntry.entry, sizeof(newEntry.entry), stdin);
-    entries[*count] = newEntry;
-    (*count)++;
-    printf("\nEntry added successfully!\n");
+}
+printf("Enter the entry:\n ");
+getchar();
+fgets(newentry.entry,sizeof(newentry.entry),stdin);
+entries[*count]=newentry;
+(*count)++;
+printf("\nEntry added successfully!\n");
 }
