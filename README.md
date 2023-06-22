@@ -1,1 +1,1 @@
-# diary
+# diary in c language
