@@ -7,8 +7,8 @@ while(fgets(str,10000,fptr)){
     printf("%s",str);
 }
 fclose(fptr);
-sleep(2);
-printf("press 'enter' to step into the next steps:\n");
-getchar();
+sleep(3);
+//printf("press 'enter' to step into the next steps:\n");
+//getchar();
 system("cls");
 }
