@@ -10,12 +10,21 @@
 #include "viewEntries.h"
 #include "searchEntry.h"
 #include "editEntry.h"
+#include<windows.h>
+#include<unistd.h>
+#include "splash_screen.h"
 
 
 void main() {
     diary entries[100];
     int choice;
     int count = 0;
+    //char splash_file[100];
+    splash_screen("welcome.txt");
+   // printf("---to Diary Management System ---\n");
+    splash_screen("diarypic.txt");
+    splash_screen("diary2.txt");
+
     const char* filename = "diary_entries.txt";
 
     loadEntriesFromFile(entries, &count, filename);
